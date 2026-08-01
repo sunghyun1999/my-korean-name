@@ -58,6 +58,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="msvalidate.01" content="59898B8287B18F176020E73F45424601" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPLYDPJKY7" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPLYDPJKY7');`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
