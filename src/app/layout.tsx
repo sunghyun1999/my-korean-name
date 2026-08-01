@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Korea travel",
   ],
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "https://mykoreanname.com"
+    process.env.NEXT_PUBLIC_BASE_URL || "https://my-korean-name.vercel.app"
   ),
   openGraph: {
     type: "website",
