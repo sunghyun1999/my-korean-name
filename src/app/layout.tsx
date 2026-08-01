@@ -17,10 +17,14 @@ export const metadata: Metadata = {
     "name in Korean",
     "Korean name translation",
     "Korean name converter",
-    "K-pop",
+    "what is my name in Korean",
+    "how to write my name in Korean",
+    "English to Korean name",
+    "Korean name meaning",
+    "K-pop name",
     "Korean culture",
-    "Seoul",
-    "Korea travel",
+    "Hangul converter",
+    "Korean personality test",
   ],
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "https://my-korean-name.vercel.app"
@@ -62,6 +66,23 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700;800&family=Gowun+Batang:wght@400;700&family=Jua&family=Nanum+Pen+Script&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "My Korean Name",
+              url: "https://my-korean-name.vercel.app",
+              description:
+                "Convert your English name to Korean (Hangul) with calligraphy animation and personality analysis based on Korean culture.",
+              applicationCategory: "Entertainment",
+              operatingSystem: "Any",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+              inLanguage: ["en", "ko"],
+            }),
+          }}
         />
       </head>
       <body className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-amber-50 antialiased">

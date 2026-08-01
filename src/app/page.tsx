@@ -38,27 +38,92 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SEO content */}
-      <section className="mt-24 max-w-2xl mx-auto text-center px-4">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          What is My Korean Name?
-        </h2>
-        <p className="text-gray-500 leading-relaxed mb-6">
-          My Korean Name converts your English name into Korean (Hangul) with a
-          beautiful calligraphy writing animation. You also get a fun personality
-          analysis based on Korean culture, including your Korean animal type,
-          Five Elements energy, Joseon dynasty rank, and lucky Korean food!
-        </p>
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          How does it work?
-        </h2>
-        <p className="text-gray-500 leading-relaxed">
-          Simply type your name in English, and we will transliterate it into
-          Korean using official Korean transliteration rules. Each name gets a
-          unique personality profile based on Korean traditions and culture.
-          Share your result with friends and see how your Korean names compare!
-        </p>
+      {/* SEO FAQ content */}
+      <section className="mt-24 max-w-2xl mx-auto px-4 space-y-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            What is My Korean Name?
+          </h2>
+          <p className="text-gray-500 leading-relaxed">
+            My Korean Name converts your English name into Korean (Hangul) with a
+            beautiful calligraphy writing animation. You also get a fun personality
+            analysis based on Korean culture, including your Korean animal type,
+            Five Elements energy, Joseon dynasty rank, and lucky Korean food!
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            How to Write My Name in Korean?
+          </h2>
+          <p className="text-gray-500 leading-relaxed">
+            Simply type your name in English, and we transliterate it into
+            Korean using official Korean transliteration rules combined with
+            a 134,000+ word pronunciation dictionary. Each name gets a unique
+            personality profile based on Korean traditions.
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            What Will I Get?
+          </h2>
+          <p className="text-gray-500 leading-relaxed">
+            Your Korean name in 4 different calligraphy styles, a Korean animal
+            type (like Tiger or Dragon), your Five Elements energy, a Joseon
+            dynasty government rank, lucky Korean food, lucky number, and name
+            compatibility. Save your result as an image and share it with friends!
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Is It Free?
+          </h2>
+          <p className="text-gray-500 leading-relaxed">
+            Yes, completely free! No sign-up required. Just enter your name and
+            instantly discover your Korean name with personality analysis.
+            Share your results on X, Reddit, or save as an image.
+          </p>
+        </div>
       </section>
+
+      {/* JSON-LD FAQ structured data for Google rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How to write my name in Korean?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Enter your English name at My Korean Name (my-korean-name.vercel.app) to instantly see it transliterated into Korean Hangul using official transliteration rules and a 134,000+ word pronunciation dictionary.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is my Korean name?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Your Korean name is the Hangul transliteration of your English name. For example, James becomes 제임스, Emma becomes 엠마, and Michael becomes 마이클. Each name also comes with a personality analysis based on Korean culture.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is the Korean name generator free?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, My Korean Name is 100% free with no sign-up required. You get calligraphy animation, personality analysis, and shareable results instantly.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Footer */}
       <footer className="mt-24 mb-8 text-center text-xs text-gray-300">

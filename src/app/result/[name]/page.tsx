@@ -15,16 +15,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const capitalized = decoded.charAt(0).toUpperCase() + decoded.slice(1);
 
   return {
-    title: `${capitalized} in Korean is ${korean}`,
-    description: `${capitalized} in Korean is ${korean}. Discover your Korean name with calligraphy animation, personality analysis, Joseon dynasty rank, and more!`,
+    title: `${capitalized} in Korean is ${korean} - How to Write ${capitalized} in Hangul`,
+    description: `${capitalized} in Korean is ${korean} (Hangul). See ${capitalized} written in beautiful Korean calligraphy, discover your Korean animal type, Five Elements energy, Joseon dynasty rank, and lucky Korean food!`,
+    keywords: [
+      `${capitalized} in Korean`,
+      `${capitalized} Korean name`,
+      `${capitalized} in Hangul`,
+      `how to write ${capitalized} in Korean`,
+      `${korean}`,
+      "Korean name",
+      "Hangul name",
+    ],
     openGraph: {
       title: `${capitalized} in Korean is ${korean}`,
-      description: `My Korean name is ${korean}! Get yours at My Korean Name.`,
+      description: `My Korean name is ${korean}! Discover yours with calligraphy & personality analysis.`,
     },
     twitter: {
       card: "summary_large_image",
       title: `${capitalized} in Korean is ${korean}`,
-      description: `My Korean name is ${korean}! Get yours at My Korean Name.`,
+      description: `My Korean name is ${korean}! Discover yours with calligraphy & personality analysis.`,
     },
   };
 }
